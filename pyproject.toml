@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmwaste"
+version = "0.1.0"
+description = "Hardware-aware local LLM planner and WASTE-style streaming backend orchestrator for low-RAM laptops."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "LLMWaste contributors" }]
+dependencies = []
+
+[project.scripts]
+llmwaste = "llmwaste.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
