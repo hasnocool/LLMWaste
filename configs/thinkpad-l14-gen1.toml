@@ -1,0 +1,18 @@
+# configs/thinkpad-l14-gen1.toml
+# Reference target for a Ryzen 5 PRO 4650U-class ThinkPad with 16 GiB RAM.
+
+[hardware]
+ram_gib = 16
+reserve_ram_gib = 3.2
+prefer_nvme = true
+prefer_avx2 = true
+
+[roles]
+coding = "qwen3-coder-30b-a3b-instruct"
+general = "kimi-linear-48b-a3b-instruct"
+fallback = "qwen3-8b"
+
+[policy]
+avoid_swap = true
+prefer_sparse_models = true
+prefer_internal_nvme = true
